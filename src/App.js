@@ -1,27 +1,25 @@
-
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Nav from './Components/Nav';
-import Shop from './pages/shop/Shop'
-import Cart from './pages/cart/Cart' 
-
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
-import ShopContext from './context/shop-context';
+import Store from './components/Store';
+import ProductsContextProvider from './context/Products.context.provider';
+import ProductDetails from './components/ProductDetails';
+import ReducerContextProvider from './context/Reducer.context.provider';
+import Navbar from './components/shared/Navbar';
+import ShopCarts from './components/ShopCarts';
 
 function App() {
   return (
-    <div className="App">
-      <ShopContext>
-      <Router>
-        <Nav/>
+    <ProductsContextProvider>
+      <ReducerContextProvider>
+        <Navbar />
         <Routes>
-          <Route path='/' element={<Shop/>}/>
-          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/products/:id' element={<ProductDetails />} />
+          <Route path='/cart' element={<ShopCarts />}/>
+          <Route path='/products' element={<Store />} />
+          <Route path='/*' element={<Navigate to='/products' />} />
         </Routes>
-      </Router>
-      </ShopContext>
-      
-      
-    </div>
+      </ReducerContextProvider>
+    </ProductsContextProvider>
   );
 }
 
