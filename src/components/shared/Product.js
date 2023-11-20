@@ -21,7 +21,7 @@ export default function Product({productData}) {
         <img src={productData.image} alt="Product" style={{width: "200px" , height: "200px"}} />
 
         <h3>{shorten(productData.title)}</h3>
-        <p>{productData.price} $</p>
+        <p>{productData.price} ₹</p>
         <div className={styles.buttonContainer}>
             <Link to={`/products/${productData.id}`}>Details</Link>
             <div className={styles.buttonCotainerChild}>
