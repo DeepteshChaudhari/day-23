@@ -21,7 +21,7 @@ export default function Cart(props) {
         <img className={styles.imageProduct} src={image} alt="Product" />
         <div className={styles.titleContainer}>
             <h3>{shorten(title)}</h3>
-            <p>{price} $</p>
+            <p>{price} ₹</p>
         </div>
         <div className={styles.spanContainer}>
             <span>{quantity}</span>
