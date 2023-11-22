@@ -1,0 +1,54 @@
+.Card{
+    height: 350px;
+    width: 220px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 10px;
+    position: relative;
+}
+img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px ;
+}
+button{
+    width: max-content;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    color: aliceblue;
+}
+.card-body{
+    padding: 20px;
+}
+.muted{
+    opacity: 0.6;
+    margin: 4px;
+    text-decoration: line-through;
+}
+.product_name{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.batch{
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    width: max-content;
+    border-radius: 5px;
+    font-size: 11px;
+    padding: 3px 6px;
+    font-weight: 700;
+    top: 8px;
+    right: 8px;
+}
